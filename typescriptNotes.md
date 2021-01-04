@@ -41,3 +41,5 @@ function App({ Component, pageProps }: AppProps) {
 export default App
 
 example code: https://nextjs.org/learn/excel/typescript/nextjs-types
+
+code snippet: tsrafc to create typescript functional component
