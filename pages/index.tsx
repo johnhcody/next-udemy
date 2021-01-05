@@ -1,11 +1,30 @@
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Navbar from '../components/navbar'
 import SideMenu from '../components/sideMenu'
 import Carousel from '../components/carousel'
 import MovieList from '../components/movieList'
 import Footer from '../components/footer'
+import { getMovies } from '../actions/data'
 
-const Home: React.FC = () => {
+interface MovieData { id: string, name: string, releaseYear: number, description: string, rating: number, genre: string, image: string }
+
+const Home: React.FC<MovieData> = () => {
+  const [movies, setMovies] = useState<MovieData>()
+
+
+  // useEffect(() => {
+  //   getMovies.then(movies) => {
+  //     setMovies(movies)
+  //   }
+  // })
+
+  // useEffect(() => {
+  //   getMovies.then(movies) => {
+  //     setMovies(movies)
+  //   }
+  // }, []);
+
   return (
     <div>
       <Head>
